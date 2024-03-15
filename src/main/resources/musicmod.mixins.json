@@ -1,11 +1,13 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "turniplabs.musicmod.mixin",
+    "package": "jamdoggie.musicmod.mixins",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
     ],
     "client": [
+      "GuiMainMenuMixin",
+      "SoundManagerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

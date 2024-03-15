@@ -1,5 +1,6 @@
 package jamdoggie.musicmod;
 
+import net.minecraft.client.sound.SoundPool;
 import turniplabs.halplibe.helper.SoundHelper;
 
 import java.io.File;
@@ -7,10 +8,14 @@ import java.io.IOException;
 
 public class MusicManager
 {
+	public SoundPool titleScreenMusic;
+
 	public void init()
 	{
 		alphaMusic();
 		betaMusic();
+
+		titleScreenMusic = new SoundPool();
 	}
 
 	private void alphaMusic()
