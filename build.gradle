@@ -72,6 +72,10 @@ repositories {
 		}
 		metadataSources { artifact() }
 	}
+	maven {
+		name = "Nifty"
+		url = "https://nifty-gui.sourceforge.net/nifty-maven-repo/"
+	}
 }
 
 dependencies {
@@ -98,6 +102,9 @@ dependencies {
 	implementation("org.apache.logging.log4j:log4j-1.2-api:${log4jVersion}")
 
 	include(implementation("org.apache.commons:commons-lang3:3.12.0"))
+	// https://mvnrepository.com/artifact/com.paulscode.soundsystem/soundsystem
+	implementation 'com.paulscode.soundsystem:soundsystem:0.0.1'
+
 }
 
 java {
