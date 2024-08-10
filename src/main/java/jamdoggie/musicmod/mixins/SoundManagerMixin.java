@@ -5,13 +5,11 @@ import jamdoggie.musicmod.MusicMod;
 import jamdoggie.musicmod.mixininterface.ISoundManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.option.GameSettings;
-import net.minecraft.client.sound.SoundManager;
-import net.minecraft.client.sound.SoundPool;
-import net.minecraft.client.sound.SoundPoolEntry;
-import net.minecraft.client.sound.SoundTypeHelper;
+import net.minecraft.client.sound.*;
 import net.minecraft.core.entity.EntityLiving;
 import net.minecraft.core.player.gamemode.Gamemode;
-import net.minecraft.core.sound.SoundType;
+import net.minecraft.core.sound.SoundCategory;
+import net.minecraft.core.sound.SoundTypes;
 import net.minecraft.core.util.helper.MathHelper;
 import net.minecraft.core.world.Dimension;
 import net.minecraft.core.world.season.Seasons;
@@ -23,6 +21,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import paulscode.sound.SoundSystem;
+import turniplabs.halplibe.helper.SoundHelper;
 
 import java.io.File;
 import java.util.Random;
@@ -68,7 +67,7 @@ public class SoundManagerMixin implements ISoundManager
 	@Inject(method = "playRandomMusicIfReady", at = @At("HEAD"), cancellable = true)
 	private void playRandomMusicIfReady(CallbackInfo ci)
 	{
-		if (!loaded || sndSystem == null || SoundTypeHelper.getEffectiveVolume(SoundType.MUSIC, this.options) == 0.0f) {
+		if (!loaded || sndSystem == null || SoundCategoryHelper.getEffectiveVolume(SoundCategory.MUSIC, this.options) == 0.0f) {
 			ci.cancel();
 			return;
 		}
@@ -181,7 +180,7 @@ public class SoundManagerMixin implements ISoundManager
 	@Override
 	public void playTitleScreenMusic()
 	{
-		if (!loaded || sndSystem == null || SoundTypeHelper.getEffectiveVolume(SoundType.MUSIC, this.options) == 0.0f)
+		if (!loaded || sndSystem == null || SoundCategoryHelper.getEffectiveVolume(SoundCategory.MUSIC, this.options) == 0.0f)
 		{
 			return;
 		}
@@ -216,7 +215,7 @@ public class SoundManagerMixin implements ISoundManager
 
 		lastSong = song;
 		sndSystem.backgroundMusic("BgMusic", song.soundUrl, song.soundName, false);
-		sndSystem.setVolume("BgMusic", SoundTypeHelper.getEffectiveVolume(SoundType.MUSIC, this.options));
+		sndSystem.setVolume("BgMusic", SoundCategoryHelper.getEffectiveVolume(SoundCategory.MUSIC, this.options));
 		sndSystem.play("BgMusic");
 	}
 }

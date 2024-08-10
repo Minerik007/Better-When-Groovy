@@ -3,10 +3,10 @@
   "id": "musicmod",
   "version": "${version}",
 
-  "name": "Better when Groovy",
-  "description": "A mod for better than adventure that adds back music from later versions of minecraft, and adds music from the soundtracks not currently used in the game. Make sure to buy C418's music at https://c418.bandcamp.com",
+  "name": "Better when Groovy (Minerik's fork)",
+  "description": "Better When Grovy is a mod for Minecraft: BTA! that adds back music from later versions of minecraft, and adds music from the soundtracks not currently used in the game. This mod also adds music that is highly inspired by C418",
   "authors": [
-    "JamDoggie"
+    "JamDoggie, Minerik"
   ],
   "contact": {
     "homepage": "",
@@ -39,7 +39,7 @@
   ],
 
   "depends": {
-		"minecraft": "~7.1-beta.1",
+		"minecraft": "~7.2",
     "fabricloader": ">=0.13.3"
   },
   "suggests": {

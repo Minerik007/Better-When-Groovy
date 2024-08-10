@@ -39,6 +39,7 @@ public class MusicManager
 	{
 		alphaMusic();
 		betaMusic();
+		extraMusic();
 
 		creativeMusic();
 		titleScreenMusic();
@@ -110,6 +111,11 @@ public class MusicManager
 		extractMusic("musicbeta/ex_ward.ogg");
 		extractMusic("musicbeta/ex_warmth.ogg");
 	}
+	
+	private void extraMusic()
+	{
+		extractMusic("othermusic/ex_sunrise.ogg");
+	}
 
 	private void creativeMusic()
 	{
@@ -122,6 +128,7 @@ public class MusicManager
 
 	private void titleScreenMusic()
 	{
+		titleScreenMusic.addSound("exmusic.ex_sunrise.ogg",  new File(exMusicDirectory.getAbsolutePath() + "/othermusic/ex_sunrise.ogg"));
 		titleScreenMusic.addSound("exmusic.ex_beginning_2.ogg",  new File(exMusicDirectory.getAbsolutePath() + "/musicbeta/ex_beginning_2.ogg"));
 		titleScreenMusic.addSound("exmusic.ex_beginning.ogg",  new File(exMusicDirectory.getAbsolutePath() + "/musicalpha/ex_beginning.ogg"));
 		titleScreenMusic.addSound("exmusic.ex_door.ogg",  new File(exMusicDirectory.getAbsolutePath() + "/musicalpha/ex_door.ogg"));

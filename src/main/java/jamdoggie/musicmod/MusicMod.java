@@ -41,4 +41,10 @@ public class MusicMod implements ModInitializer, GameStartEntrypoint, RecipeEntr
 		musicManager = new MusicManager();
 		musicManager.init();
 	}
+
+	@Override
+	public void initNamespaces() {
+		// TODO Auto-generated method stub
+		
+	}
 }
