@@ -90,7 +90,7 @@ public class SoundManagerMixin implements ISoundManager
 		{
 			musicPool = this.cave;
 		}
-
+		
 		// Play nether music if we're in the nether
 		if (minecraft.thePlayer.world.dimension == Dimension.nether)
 		{
@@ -99,6 +99,9 @@ public class SoundManagerMixin implements ISoundManager
 		else
 		// Overworld music
 		{
+			musicPool = MusicMod.musicManager.music;
+			
+			//Music based on time
 			if (minecraft.thePlayer.getGamemode() == Gamemode.creative)
 			{
 				musicPool = MusicMod.musicManager.creativeMusic;

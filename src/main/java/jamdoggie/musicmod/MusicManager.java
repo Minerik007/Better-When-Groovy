@@ -24,7 +24,10 @@ public class MusicManager
 			exMusicDirectory = new File(appDirectory.getAbsolutePath() + "/resources/mod/ex-music");
 		}
 	}
-
+	
+	public static SoundPool music = new SoundPool();
+	public static SoundPool notFittingMusic = new SoundPool();
+	
 	public SoundPool titleScreenMusic = new SoundPool();
 	public SoundPool netherMusic = new SoundPool();
 
@@ -51,70 +54,71 @@ public class MusicManager
 
 	private void alphaMusic()
 	{
-		extractMusic("musicalpha/ex_beginning.ogg");
-		extractMusic("musicalpha/ex_cat.ogg");
-		extractMusic("musicalpha/ex_chris.ogg");
-		extractMusic("musicalpha/ex_clark.ogg");
-		extractMusic("musicalpha/ex_danny.ogg");
-		extractMusic("musicalpha/ex_death.ogg");
-		extractMusic("musicalpha/ex_dog.ogg");
-		extractMusic("musicalpha/ex_door.ogg");
-		extractMusic("musicalpha/ex_droopy_likes_ricochet.ogg");
-		extractMusic("musicalpha/ex_droopy_likes_your_face.ogg");
-		extractMusic("musicalpha/ex_dry_hands.ogg");
-		extractMusic("musicalpha/ex_equinoxe.ogg");
-		extractMusic("musicalpha/ex_excuse.ogg");
-		extractMusic("musicalpha/ex_haggstorm.ogg");
-		extractMusic("musicalpha/ex_key.ogg");
-		extractMusic("musicalpha/ex_living_mice.ogg");
-		extractMusic("musicalpha/ex_mice_on_venus.ogg");
-		extractMusic("musicalpha/ex_minecraft.ogg");
-		extractMusic("musicalpha/ex_moog_city.ogg");
-		extractMusic("musicalpha/ex_oxygene.ogg");
-		extractMusic("musicalpha/ex_subwoofer_lullaby.ogg");
-		extractMusic("musicalpha/ex_sweden.ogg");
-		extractMusic("musicalpha/ex_thirteen.ogg");
-		extractMusic("musicalpha/ex_wet_hands.ogg");
+		extractMusic("musicalpha/","ex_beginning.ogg", music);
+		extractMusic("musicalpha/","ex_cat.ogg", notFittingMusic);
+		extractMusic("musicalpha/","ex_chris.ogg", music);
+		extractMusic("musicalpha/","ex_clark.ogg", music);
+		extractMusic("musicalpha/","ex_danny.ogg", music);
+		extractMusic("musicalpha/","ex_death.ogg", notFittingMusic);
+		extractMusic("musicalpha/","ex_dog.ogg", notFittingMusic);
+		extractMusic("musicalpha/","ex_door.ogg", music);
+		extractMusic("musicalpha/","ex_droopy_likes_ricochet.ogg", music);
+		extractMusic("musicalpha/","ex_droopy_likes_your_face.ogg", music);
+		extractMusic("musicalpha/","ex_dry_hands.ogg", music);
+		extractMusic("musicalpha/","ex_equinoxe.ogg", music);
+		extractMusic("musicalpha/","ex_excuse.ogg", music);
+		extractMusic("musicalpha/","ex_haggstorm.ogg", music);
+		extractMusic("musicalpha/","ex_key.ogg", music);
+		extractMusic("musicalpha/","ex_living_mice.ogg", music);
+		extractMusic("musicalpha/","ex_mice_on_venus.ogg", music);
+		extractMusic("musicalpha/","ex_minecraft.ogg", music);
+		extractMusic("musicalpha/","ex_moog_city.ogg", music);
+		extractMusic("musicalpha/","ex_oxygene.ogg", music);
+		extractMusic("musicalpha/","ex_subwoofer_lullaby.ogg", music);
+		extractMusic("musicalpha/","ex_sweden.ogg", music);
+		extractMusic("musicalpha/","ex_thirteen.ogg", notFittingMusic);
+		extractMusic("musicalpha/","ex_wet_hands.ogg", music);
 
 	}
 
 	private void betaMusic()
 	{
-		extractMusic("musicbeta/ex_alpha.ogg");
-		extractMusic("musicbeta/ex_aria_math.ogg");
-		extractMusic("musicbeta/ex_ballad_of_the_cats.ogg");
-		extractMusic("musicbeta/ex_beginning_2.ogg");
-		extractMusic("musicbeta/ex_biome_fest.ogg");
-		extractMusic("musicbeta/ex_blind_spots.ogg");
-		extractMusic("musicbeta/ex_blocks.ogg");
-		extractMusic("musicbeta/ex_chirp.ogg");
-		extractMusic("musicbeta/ex_concrete_halls.ogg");
-		extractMusic("musicbeta/ex_dead_voxel.ogg");
-		extractMusic("musicbeta/ex_dreiton.ogg");
-		extractMusic("musicbeta/ex_eleven.ogg");
-		extractMusic("musicbeta/ex_far.ogg");
-		extractMusic("musicbeta/ex_flake.ogg");
-		extractMusic("musicbeta/ex_floating_trees.ogg");
-		extractMusic("musicbeta/ex_haunt_muskie.ogg");
-		extractMusic("musicbeta/ex_intro.ogg");
-		extractMusic("musicbeta/ex_ki.ogg");
-		extractMusic("musicbeta/ex_kyoto.ogg");
-		extractMusic("musicbeta/ex_mall.ogg");
-		extractMusic("musicbeta/ex_mellohi.ogg");
-		extractMusic("musicbeta/ex_moog_city_2.ogg");
-		extractMusic("musicbeta/ex_mutation.ogg");
-		extractMusic("musicbeta/ex_stal.ogg");
-		extractMusic("musicbeta/ex_strad.ogg");
-		extractMusic("musicbeta/ex_taswell.ogg");
-		extractMusic("musicbeta/ex_the_end.ogg");
-		extractMusic("musicbeta/ex_wait.ogg");
-		extractMusic("musicbeta/ex_ward.ogg");
-		extractMusic("musicbeta/ex_warmth.ogg");
+		extractMusic("musicbeta/","ex_alpha.ogg", music);
+		extractMusic("musicbeta/","ex_aria_math.ogg", music);
+		extractMusic("musicbeta/","ex_ballad_of_the_cats.ogg", music);
+		extractMusic("musicbeta/","ex_beginning_2.ogg", music);
+		extractMusic("musicbeta/","ex_biome_fest.ogg", music);
+		extractMusic("musicbeta/","ex_blind_spots.ogg", music);
+		extractMusic("musicbeta/","ex_blocks.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_chirp.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_concrete_halls.ogg", music);
+		extractMusic("musicbeta/","ex_dead_voxel.ogg", music);
+		extractMusic("musicbeta/","ex_dreiton.ogg", music);
+		extractMusic("musicbeta/","ex_eleven.ogg", music);
+		extractMusic("musicbeta/","ex_far.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_flake.ogg", music);
+		extractMusic("musicbeta/","ex_floating_trees.ogg", music);
+		extractMusic("musicbeta/","ex_haunt_muskie.ogg", music);
+		extractMusic("musicbeta/","ex_intro.ogg", music);
+		extractMusic("musicbeta/","ex_ki.ogg", music);
+		extractMusic("musicbeta/","ex_kyoto.ogg", music);
+		extractMusic("musicbeta/","ex_mall.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_mellohi.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_moog_city_2.ogg", music);
+		extractMusic("musicbeta/","ex_mutation.ogg", music);
+		extractMusic("musicbeta/","ex_stal.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_strad.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_taswell.ogg", music);
+		extractMusic("musicbeta/","ex_the_end.ogg", music);
+		extractMusic("musicbeta/","ex_wait.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_ward.ogg", notFittingMusic);
+		extractMusic("musicbeta/","ex_warmth.ogg", music);
 	}
 	
 	private void extraMusic()
 	{
-		extractMusic("othermusic/ex_sunrise.ogg");
+		extractMusic("othermusic/","ex_sunrise.ogg", music);
+		extractMusic("othermusic/","ex_far_lands.ogg", music);
 	}
 
 	private void creativeMusic()
@@ -162,17 +166,19 @@ public class MusicManager
 	}
 
 	// Modification of the method from HalpLibe
-	public static void extractMusic(String soundSource){
+	public static void extractMusic(String soundLocation, String soundFile, SoundPool music){
 		if (appDirectory == null) {
 			HalpLibe.LOGGER.warn("Resource directory cannot be found, function is only intended to be ran on the Client!");
 			return;
 		}
 		String destination = exMusicDirectory.getPath();
-		String source = (getMusicDirectory() + soundSource).replace("//", "/").trim();
+		String source = (getMusicDirectory() + soundLocation + soundFile).replace("//", "/").trim();
 		HalpLibe.LOGGER.info("File source: " + source);
 		HalpLibe.LOGGER.info("File destination: " + destination);
 
-		HalpLibe.LOGGER.info(extract(source, destination, soundSource) + " Added to sound directory");
+		HalpLibe.LOGGER.info(extract(source, destination, soundLocation + soundFile) + " Added to sound directory");
+		
+		music.addSound("exmusic." + soundFile,  new File(exMusicDirectory.getAbsolutePath() + "/" + soundLocation + soundFile));
 	}
 
 	public static String getMusicDirectory()
